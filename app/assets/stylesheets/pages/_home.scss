@@ -1,1 +1,70 @@
 // Specific CSS for your home-page
+
+.w3-container{
+  align-items: center;
+  padding-top: 130px;
+  background-color: $white;
+}
+
+.container{
+  text-align: center;
+  width: 180px;
+  height: 100px;
+  padding-top: 20px;
+  background-color: $white;
+}
+
+.photo{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-family: Roboto;
+  text-align: center;
+  font-size: 14px;
+  align-items: center;
+  display: block;
+  width: 150px
+  border-radius 10px;
+}
+
+h1 {
+  font-family: Lobster;
+  color: $darkblue;
+  text-align: center;
+  font-size: 64px;
+}
+
+h2 {
+  font-family: Roboto;
+  color: $turquoise;
+  text-align: center;
+}
+
+
+.footer {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
