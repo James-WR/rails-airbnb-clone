@@ -1,3 +1,3 @@
 Forget CakeHub, JustCake, CaskDash, Cake-a-licious! and the like...
 
-For all your cake needs you only need Cake 'n' Crumbs!
+For all your cake needs you only need **Cake 'n' Crumbs**!
