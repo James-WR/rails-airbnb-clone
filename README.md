@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Forget CakeHub, JustCake, CaskDash, Cake-a-licious! and the like...
+
+For all your cake needs you only need Cake 'n' Crumbs!
