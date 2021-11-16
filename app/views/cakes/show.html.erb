@@ -1,8 +1,13 @@
-<h1><%=@cake.name%></h1>
-<p><%=@cake.details%></p>
-<p><%=@cake.servings%></p>
-<p><%=@cake.price%></p>
-<p><%=@cake.baker%></p>
+<div class="card">
+  <%= image_tag(@cake.photo_url, class: "card-img-top", alt: "image") %>
+  <div class="card-body">
+    <h5 class="card-title"><%= @cake.name %></h5>
+    <p><%= @cake.description %></p>
+    <p>$<%= @cake.price %></p>
+    <p><%= @cake.servings %></p>
+    <p><%= @cake.user%></p>
+  </div>
+</div>
 
 <%# <%=link_to "Buy now",  %>
 <%=link_to "Go back", cakes_path %>
