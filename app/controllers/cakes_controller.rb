@@ -1,4 +1,5 @@
 class CakesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:cakes, :show]
   def index
     @cakes = Cake.all
   end
