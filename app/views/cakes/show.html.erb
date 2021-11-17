@@ -1,13 +1,36 @@
-<div class="card">
-  <%= image_tag(@cake.photo_url, class: "card-img-top", alt: "image") %>
-  <div class="card-body">
-    <h5 class="card-title"><%= @cake.name %></h5>
-    <p><%= @cake.description %></p>
-    <p>$<%= @cake.price %></p>
-    <p><%= @cake.servings %></p>
-    <p><%= @cake.user%></p>
+<%= render "navbar"%>
+
+<div class="row row-cols-2">
+  <div class="col mb-4">
+    <%= image_tag(@cake.photo_url, class: "cakephoto", alt: "image") %>
+  </div>
+
+  <div class="col mb-4">
+    <div class="card-body-show">
+      <h5 class="card-title"><%= @cake.name %></h5>
+      <p><i><%= @cake.description %></i></p>
+      <p>£<%= '%.2f' % @cake.price %></p>
+      <p>Serves <%= @cake.servings %></p>
+      <%= link_to "Buy now", new_cake_order_path(@cake), class:"btn btn-danger" %>
+    </div>
   </div>
 </div>
 
-<%# <%=link_to "Buy now",  %>
+
 <%=link_to "Go back", cakes_path %>
+
+
+<footer>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      © Cakes'n'Crumbs, 2021
+    </div>
+  </div>
+</footer>
