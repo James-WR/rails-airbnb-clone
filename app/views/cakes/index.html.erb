@@ -3,16 +3,17 @@
 <h1>Our cakes</h1>
 <h2>All of our delicious cakes are made to order by star home bakers</h2>
 <br>
+<br>
 
 <div class="row row-cols-4">
   <% @cakes.each do |cake| %>
   <div class="col mb-4">
     <div class="card">
-      <%= image_tag(cake.photo_url, class: "card-img-top", alt: "image") %>
+      <%= image_tag(cake.photo_url, class: "card-img-top indexphoto", alt: "image") %>
       <div class="card-body">
         <h5 class="card-title"><%= link_to cake.name, cake_path(cake) %></h5>
         <p><%= cake.description %></p>
-        <p><%= cake.price %></p>
+        <p>£<%= '%.2f' % cake.price %></p>
       </div>
     </div>
   </div>
