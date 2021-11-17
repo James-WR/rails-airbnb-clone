@@ -1,0 +1,8 @@
+<%= simple_form_for(@cake) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :servings %>
+  <%= f.input :price %>
+  <%= f.input :photo_url, label: "Your cake photo" %>
+  <%= f.submit class: "btn btn-primary"%>
+  <% end %>
