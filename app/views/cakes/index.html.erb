@@ -1,13 +1,36 @@
+<%= render "navbar"%>
+
 <h1>Our cakes</h1>
-<h4>All of our delicious cakes are made to order by star home bakers</h4>
+<h2>All of our delicious cakes are made to order by star home bakers</h2>
+<br>
 
-<%# cake image urls %>
-<%# grid of cards to replace li %>
-
-<ul>
+<div class="row row-cols-4">
   <% @cakes.each do |cake| %>
-    <li><%= link_to cake.name, cake_path(cake) %></li>
-    <li><%= cake.description %></li>
-    <li><%= cake.price %></li>
+  <div class="col mb-4">
+    <div class="card">
+      <%= image_tag(cake.photo_url, class: "card-img-top", alt: "image") %>
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to cake.name, cake_path(cake) %></h5>
+        <p><%= cake.description %></p>
+        <p><%= cake.price %></p>
+      </div>
+    </div>
+  </div>
   <% end %>
-</ul>
+</div>
+
+
+<footer>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      © Cakes'n'Crumbs, 2021
+    </div>
+  </div>
+</footer>
