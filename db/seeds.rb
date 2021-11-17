@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user = User.create!(email: "a.cs@gmail.com", password: "123456", baker: true, avatar_url: "#")
+user = User.create!(email: "a.cs@gmail.com", password: "123456", baker: true, avatar_url: "#", name: "Nigella Lawson")
 
 Cake.create!(user_id: user.id, photo_url: "https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  name: 'Chocolate', description: 'rich and indulgent chocolate cake', servings: 16, price: 49.99
+  name: 'Chocolate', description: 'rich and indulgent chocolate cake', servings: 16, price: 49.99)
 Cake.create(user_id: user.id, photo_url: "https://images.immediate.co.uk/production/volatile/sites/2/2019/08/Red-Velvet-cake-bb76a19.jpg?quality=90&resize=768%2C574",
   name: 'Red Velvet', description: 'sweet and delicious red velvet cake', servings: 14, price: 64.99)
 Cake.create(user_id: user.id, photo_url: "https://www.simplyrecipes.com/thmb/80vNHnv7HLfU9JXreyBYYt6XeHI=/2877x1918/filters:fill(auto,1)/Carrot-Cake-LEAD-3-81e1d3700f0241279f9ba4c2b8b6153c.jpg",
