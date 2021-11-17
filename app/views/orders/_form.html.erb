@@ -1,0 +1,7 @@
+<%= simple_form_for [@cake, @order] do |f| %>
+    <h2>"<%= @cake.name %>"</h2>
+    <h3>£<%= @cake.price %></h3>
+    <%= f.input :portions, label: "For how many people?"%>
+    <%= f.input :requests, label: "Any special requests?"%>
+    <%= f.submit "Buy", class: "btn btn-primary" %>
+  <% end %>

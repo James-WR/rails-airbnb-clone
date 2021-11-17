@@ -4,12 +4,10 @@ class OrdersController < ApplicationController
     @orders = Order.where(user_id: current_user.id)
   end
 
-  # def new
-  #   @cake = Cake.find(params[:cake_id])
-  #   @user = User.find(params[:user_id])
-  #   @order = Order.new
-  # end
-  # order form - to be implemented
+  def new
+    @cake = Cake.find(params[:cake_id])
+    @order = Order.new
+  end
 
   def create
     @cake = Cake.find(params[:cake_id])
