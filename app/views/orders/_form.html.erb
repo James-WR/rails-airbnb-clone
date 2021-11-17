@@ -1,7 +1,13 @@
-<%= simple_form_for [@cake, @order] do |f| %>
-    <h2>"<%= @cake.name %>"</h2>
-    <h3>£<%= @cake.price %></h3>
-    <%= f.input :portions, label: "For how many people?"%>
-    <%= f.input :requests, label: "Any special requests?"%>
-    <%= f.submit "Buy", class: "btn btn-primary" %>
+<div class="container-order-form">
+  <%= simple_form_for [@cake, @order] do |f| %>
+    <h2>You are about to buy a delicious <%= @cake.name %></h2>
+    <h3>To pay: £<%= '%.2f' % @cake.price %></h3>
+    <div class="row1">
+      <%#= f.input :portions, label: "How many people will enjoy your cake?", placeholder: "Give us a portion size from 1 to 20", required: true%>
+      <%= f.input :requests, label: "Do you have any special requests?", placeholder: "Extra icing? Gluten free? Let us know! "%>
+    </div>
+    <div class="submit-order-form">
+      <%= f.submit "Buy now", class: "btn btn-primary" %>
+    </div>
   <% end %>
+</div>

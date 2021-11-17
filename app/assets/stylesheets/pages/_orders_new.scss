@@ -1,0 +1,32 @@
+.container-order-form {
+  width: 750px;
+  margin: 0 auto;
+  height: 100px;
+  padding-top: 50px;
+  background-color: $white;
+
+  .row1{
+    padding: 30px;
+  }
+
+  h3 {
+    padding-top: 20px;
+    text-align: center;
+  }
+  label {
+    margin: 20px 0;
+  }
+
+
+  .submit-order-form {
+    display: flex;
+    justify-content: center;
+    input {
+      width: 150px;
+      padding: 10px;
+      border-radius: 7px;
+    }
+
+  }
+
+}
