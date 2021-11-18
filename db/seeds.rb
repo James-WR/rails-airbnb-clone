@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user = User.create!(name: "Luke", email: "a.cs@gmail.com", password: "123456", baker: true, avatar_url: "#")
+
+user = User.create!(email: "a.cs@gmail.com", password: "123456", baker: true, avatar_url: "#", name: "Nigella Lawson")
+
 
 Cake.create!(user_id: user.id, photo_url: "https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   name: 'Chocolate', description: 'rich and indulgent chocolate cake', servings: 16, price: 49.99)
