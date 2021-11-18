@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_18_123025) do
+
+ActiveRecord::Schema.define(version: 2021_11_18_115839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,7 +68,7 @@ ActiveRecord::Schema.define(version: 2021_11_18_123025) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "baker"
+    t.boolean "baker", default: false
     t.string "avatar_url"
     t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
