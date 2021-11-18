@@ -3,34 +3,26 @@
 <h1>Our cakes</h1>
 <h2>All of our delicious cakes are made to order by star home bakers</h2>
 <br>
+<br>
 
-<div class="row row-cols-4">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mx-3">
   <% @cakes.each do |cake| %>
-  <div class="col mb-4">
-    <div class="card">
-      <%= image_tag(cake.photo_url, class: "card-img-top", alt: "image") %>
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to cake.name, cake_path(cake) %></h5>
-        <p><%= cake.description %></p>
-        <p><%= cake.price %></p>
+    <div class="col mb-4">
+      <div class="card">
+        <%= link_to cake_path(cake) do %>
+          <%= cl_image_tag(cake.photo_url, class: "card-img-top", alt: "image", :transformation=>[
+            {:width=>300, :height=>200, :crop=>"thumb"}
+            ]) %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to cake.name, cake_path(cake) %></h5>
+          <p><%= cake.description %></p>
+          <p>£<%= '%.2f' % cake.price %></p>
+        </div>
       </div>
     </div>
-  </div>
   <% end %>
 </div>
 
+<%= render "footer" %>
 
-<footer>
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      © Cakes'n'Crumbs, 2021
-    </div>
-  </div>
-</footer>

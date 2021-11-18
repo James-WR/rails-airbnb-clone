@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   resources :cakes do
     resources :orders, only: [:create, :new]
   end
-  resources :orders, only: [:index, :edit, :update, :destroy]
+  resources :orders, only: [:index, :edit, :update, :destroy] do
+    member do
+      get :order_confirmed
+    end
+  end
 end

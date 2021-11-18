@@ -1,12 +1,12 @@
 // Specific CSS for your home-page
 
-.w3-container{
+.w3-container {
   align-items: center;
   padding-top: 70px;
   background-color: $white;
 }
 
-.container{
+.container {
   text-align: center;
   width: 180px;
   height: 80px;
@@ -14,12 +14,12 @@
   background-color: $white;
 }
 
-.photo{
+.photo {
   display: flex;
   justify-content: center;
 }
 
-img {
+.landingphoto{
   width: 600px;
   height: 350px;
 }
