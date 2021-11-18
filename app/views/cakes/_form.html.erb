@@ -1,8 +1,13 @@
-<%= simple_form_for(@cake) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :servings %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit class: "btn btn-primary"%>
-  <% end %>
+<%= render "navbar"%>
+
+<div class="container form-container" style="width:500px">
+  <h2>Add a Cake</h2>
+  <%= simple_form_for(@cake) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :servings %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit class: "btn btn-primary"%>
+    <% end %>
+</div>
