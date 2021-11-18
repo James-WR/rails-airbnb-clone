@@ -1,8 +1,6 @@
-<%= render "navbar"%>
-
 <div class="row row-cols-2">
   <div class="col mb-4">
-    <%= cl_image_tag(@cake.photo_url, class: "cakephoto", alt: "image") %>
+    <%= cl_image_tag(@cake.photo.key, class: "cakephoto", alt: "image") %>
   </div>
 
   <div class="col mb-4">
@@ -19,6 +17,3 @@
 
 
 <%=link_to "Go back", cakes_path %>
-
-<%= render "footer" %>
-
