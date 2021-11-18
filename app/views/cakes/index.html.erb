@@ -1,5 +1,3 @@
-<%= render "navbar"%>
-
 <h1>Our cakes</h1>
 <h2>All of our delicious cakes are made to order by star home bakers</h2>
 <br>
@@ -15,8 +13,8 @@
     <div class="col mb-4">
       <div class="card">
         <%= link_to cake_path(cake) do %>
-          <%= cl_image_tag(cake.photo_url, class: "card-img-top", alt: "image", :transformation=>[
-            {:width=>300, :height=>200, :crop=>"thumb"}
+          <%= cl_image_tag(cake.photo.key, class: "card-img-top", alt: "image", :transformation=>[
+            {:width=>300, :height=>200, :crop=>"fill"}
             ]) %>
         <% end %>
         <div class="card-body">
@@ -28,6 +26,3 @@
     </div>
   <% end %>
 </div>
-
-<%= render "footer" %>
-

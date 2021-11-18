@@ -15,16 +15,25 @@
 }
 
 .photo {
+  background: asset_url("cake-background.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
+  width: 100vw;
+  height: calc(100vh - (100px));
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 200px;
 }
 
-.landingphoto{
-  width: 600px;
-  height: 350px;
-}
+// .landingphoto{
+//   width: auto;
+//   height: auto;
+//   object-fit: fill;
+// }
 
-.btn {
+.btn{
   font-family: Roboto;
   text-align: center;
   font-size: 14px;
@@ -33,6 +42,7 @@
   width: 150px
   border-radius 10px;
 }
+
 
 h1 {
   font-family: Lobster;
@@ -45,6 +55,13 @@ h2 {
   font-family: Roboto;
   color: $turquoise;
   text-align: center;
+}
+
+h3 {
+  font-family: Lobster Two;
+  color: $turquoise;
+  text-align: center;
+  font-size: 48px;
 }
 
 
