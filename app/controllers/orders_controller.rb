@@ -1,6 +1,4 @@
 class OrdersController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create, :order_confirmed]
-  # ^ only for purposes of debugging, remove for final app
 
   def index
     @orders = Order.where(user_id: current_user.id)
