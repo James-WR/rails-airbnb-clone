@@ -3,8 +3,13 @@
 <h1>Our cakes</h1>
 <h2>All of our delicious cakes are made to order by star home bakers</h2>
 <br>
+<div id="search-whole-box">
+  <%= form_tag cakes_path, method: :get, class:"form-inline" do %>
+    <%= text_field_tag :query, params[:query], class: "form-control", id: "index-search-bar", placeholder: "Search for a cake" %>
+    <%= submit_tag "Search", class: "btn btn-primary", id: "index-search-submit" %>
+  <% end %>
+</div>
 <br>
-
 <div class="row row-cols-4">
   <% @cakes.each do |cake| %>
     <div class="col mb-4">

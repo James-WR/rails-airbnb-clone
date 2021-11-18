@@ -4,6 +4,26 @@
   object-fit: fill;
 }
 
+#index-search-bar {
+  width: 500px;
+  height: 41px;
+  margin: 10px auto;
+}
+
+#index-search-submit{
+  // margin: auto;
+  border-radius: 6px;
+  font-size: large;
+}
+
+#search-whole-box{
+  display: flex;
+  justify-content: center;
+    input {
+      margin-right: 8px;
+    }
+}
+
 // .cake-index{
 //   align-items: center;
 // }
