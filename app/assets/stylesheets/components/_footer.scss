@@ -1,3 +1,15 @@
 .copyright {
   color: rgb(185, 185, 185);
 }
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.cake-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
