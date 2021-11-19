@@ -11,10 +11,12 @@
   </head>
 
   <body>
-    <%= render "cakes/navbar"%>
-    <%= yield %>
+    <div class="page-container">
+      <div class="navbar-container"><%= render "cakes/navbar" %></div>
+      <div class="content-container"><%= yield %></div>
+      <div class="footer-container"><%= render "cakes/footer" %></div>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "cakes/footer" %>
   </body>
 </html>
