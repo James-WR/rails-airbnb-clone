@@ -9,7 +9,7 @@
       <p><i><%= @cake.description %></i></p>
       <p>£<%= '%.2f' % @cake.price %></p>
       <p>Serves <%= @cake.servings %></p>
-      <p>Baked by: Paul Hollywood</p>
+      <p>Baked by: <%= @cake.user.name %> </p>
       <%= link_to "Buy now", new_cake_order_path(@cake), class:"btn btn-danger" %>
     </div>
   </div>
