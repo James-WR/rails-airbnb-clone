@@ -1,4 +1,6 @@
-<div class="container form-container" style="width:500px">
+<%= render "navbar"%>
+
+<div class="container-order-form" style="width:500px">
   <h2>Add a Cake</h2>
   <%= simple_form_for(@cake) do |f| %>
     <%= f.input :name %>
@@ -6,7 +8,8 @@
     <%= f.input :servings %>
     <%= f.input :price %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit class: "btn btn-primary"%>
+    <div class="submit-order-form">
+      <%= f.submit "Buy now", class: "btn btn-primary" %>
+    </div>
     <% end %>
 </div>
-<br>
