@@ -1,18 +1,20 @@
-
-.cakephoto{
-  height: 400px;
-  width: auto;
-  object-fit: cover;
-  margin-left: 50px;
+.show-items {
+  margin-top: 32px;
+}
+.cakephoto {
+  width: 60%;
+  // width: auto;
+  // object-fit: cover;
+  // margin-left: 50px;
 }
 
 
-.card-body-show{
-  align-content: center;
-  align-self: center;
-  margin-top: 100px;
-  background-color: #f9f9f9;
-  width: 500px;
-  text-align: center;
-  padding-top: 20px;
+.buy-form {
+  background-color: rgba(#dae6e4, 0.51);
+  padding: 16px;
+  width: 60%;
+  margin: 0 auto;
   }
+
+//   .back-link {
+//   }

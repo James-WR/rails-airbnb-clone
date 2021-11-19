@@ -1,19 +1,17 @@
-<div class="row row-cols-2">
-  <div class="col mb-4">
-    <%= cl_image_tag(@cake.photo.key, class: "cakephoto", alt: "image") %>
-  </div>
-
-  <div class="col mb-4">
-    <div class="card-body-show">
-      <h5 class="card-title"><%= @cake.name %></h5>
-      <p><i><%= @cake.description %></i></p>
+<div class="row d-flex align-items-center text-center justify-content-center show-items">
+  <div class="col-sm-12 col-lg-6"><%= cl_image_tag(@cake.photo.key, class: "cakephoto", alt: "image") %></div>
+  <div class="col-sm-12 col-lg-6">
+    <div class="buy-form">
+      <h5><%= @cake.name %></h5>
+      <p>
+        <i><%= @cake.description %></i>
+      </p>
       <p>£<%= '%.2f' % @cake.price %></p>
       <p>Serves <%= @cake.servings %></p>
       <p>Baked by: <%= @cake.user.name %> </p>
       <%= link_to "Buy now", new_cake_order_path(@cake), class:"btn btn-danger" %>
     </div>
+    <br>
+    <%=link_to "<< Go back", cakes_path %>
   </div>
 </div>
-
-
-<%=link_to "Go back", cakes_path %>
