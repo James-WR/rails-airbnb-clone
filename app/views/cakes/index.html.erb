@@ -1,17 +1,20 @@
-<%= render "navbar"%>
-
 <h1>Our cakes</h1>
 <h2>All of our delicious cakes are made to order by star home bakers</h2>
 <br>
+<div id="search-whole-box">
+  <%= form_tag cakes_path, method: :get, class:"form-inline" do %>
+    <%= text_field_tag :query, params[:query], class: "form-control", id: "index-search-bar", placeholder: "Search for a cake" %>
+    <%= submit_tag "Search", class: "btn btn-primary", id: "index-search-submit" %>
+  <% end %>
+</div>
 <br>
-
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mx-3">
   <% @cakes.each do |cake| %>
     <div class="col mb-4">
       <div class="card h-100">
         <%= link_to cake_path(cake) do %>
-          <%= cl_image_tag(cake.photo_url, class: "card-img-top", alt: "image", :transformation=>[
-            {:width=>300, :height=>200, :crop=>"thumb"}
+          <%= cl_image_tag(cake.photo.key, class: "card-img-top", alt: "image", :transformation=>[
+            {:width=>300, :height=>200, :crop=>"fill"}
             ]) %>
         <% end %>
         <div class="card-body">
@@ -25,5 +28,3 @@
     </div>
   <% end %>
 </div>
-
-<%= render "footer" %>
