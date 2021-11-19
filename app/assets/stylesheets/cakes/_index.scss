@@ -4,6 +4,20 @@
   object-fit: fill;
 }
 
+
+#price{
+margin-bottom: 0px;
+}
+
+#cake-description{
+  margin-bottom: 16px;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+
 #index-search-bar {
   width: 500px;
   height: 41px;
